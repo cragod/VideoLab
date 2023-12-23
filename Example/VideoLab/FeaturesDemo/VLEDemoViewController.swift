@@ -255,7 +255,7 @@ class VLEDemoViewController : UITableViewController{
         let composition = RenderComposition()
         composition.renderSize = CGSize(width: 1280, height: 720)
         composition.layers = [renderLayer1]
-        composition.animationLayer = makeTextAnimationLayer()
+        composition.elements.append(ElementLayer(content: makeTextAnimationLayer()))
         
         // 3. VideoLab
         let videoLab = VideoLab(renderComposition: composition)
